@@ -1,3 +1,5 @@
+using thelist.Models;
+
 [assembly: WebActivator.PreApplicationStartMethod(typeof(thelist.App_Start.NinjectMVC3), "Start")]
 [assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(thelist.App_Start.NinjectMVC3), "Stop")]
 
@@ -46,6 +48,7 @@ namespace thelist.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IToDoListRepository>().To<ToDoListRepository>();
         }		
     }
 }
