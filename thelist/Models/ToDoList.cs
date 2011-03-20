@@ -4,6 +4,6 @@ namespace thelist.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Done { get; set; }
+        public bool Done { get; set; }
     }
 }
